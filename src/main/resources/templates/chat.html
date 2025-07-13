@@ -82,7 +82,7 @@
         let stompClient = null;
 
         function connect() {
-            const socket = new SockJS("http://localhost:8080/chat");
+            var socket = new SockJS("https://realtime-chat-app-springboot.onrender.com/chat");
             stompClient = Stomp.over(socket);
 
             stompClient.connect({}, function (frame) {
