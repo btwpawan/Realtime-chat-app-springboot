@@ -82,7 +82,7 @@
         let stompClient = null;
 
         function connect() {
-            var socket = new SockJS("https://realtime-chat-app-springboot-production.up.railway.app/chat");
+            var socket = new SockJS("/chat");
             stompClient = Stomp.over(socket);
 
             stompClient.connect({}, function (frame) {
